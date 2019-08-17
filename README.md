@@ -5,4 +5,4 @@ To play the game, move left and right with your arrow keys and avoid the falling
 
 Hope you enjoy the simplicity and style
 
-- Herman
+Herman Neple August 17th 2019
