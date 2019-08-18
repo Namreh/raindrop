@@ -36,6 +36,8 @@ function drop(){
     if((this.x < mouseX+25 && this.x+10>mouseX-25) && (this.y+15 < y+50 && this.y+40 > y)){
       endGame();
     }
+    if(this.y > 500)
+      drops.shift()
   }
 
   this.draw = function(){
