@@ -1,10 +1,13 @@
 //Start of main.js
 let y = 435;
 
-let speed = 2
+let speed = 2;
 
-var drops = []
+var drops = [];
 
+let newdrop = 999;
+
+let spawnrate = 10;
 
 function drop(){
   this.x = random(480);
@@ -15,7 +18,7 @@ function drop(){
   }
 
   this.draw = function(){
-    rect(this.x, this.y, 10, 40)
+    rect(this.x, this.y, 10, 40);
   }
 }
 
@@ -26,7 +29,11 @@ function setup(){
 }
 
 function update(){
-
+  if(newdrop>=1000){
+    drops.push(new drop());
+    newdrop = 0;
+  }
+  newdrop += spawnrate;
 }
 
 function draw(){
