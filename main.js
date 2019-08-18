@@ -15,12 +15,19 @@ let leveluprate = 10;
 
 let levelup = 0;
 
+function endGame(){
+  console.log("game over");
+}
+
 function drop(){
   this.x = random(480);
   this.y = 0;
 
   this.move = function(){
     this.y += 0.5 * speed;
+    if((this.x < mouseX+25 && this.x+10>mouseX-25) && (this.y+15 < y+50 && this.y+40 > y)){
+      endGame();
+    }
   }
 
   this.draw = function(){
