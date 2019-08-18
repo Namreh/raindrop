@@ -15,12 +15,20 @@ let leveluprate = 10;
 
 let levelup = 0;
 
+let side = false;
+
 function endGame(){
   console.log("game over");
 }
 
 function drop(){
-  this.x = random(480);
+  if (side){
+    this.x = random(250, 450)
+  }
+  else {
+    this.x = random(0, 249)
+  }
+
   this.y = 0;
 
   this.move = function(){
@@ -47,6 +55,7 @@ function update(){
     newdrop = 0;
     points += 5
     levelup++;
+    side = !side;
   }
   if(levelup>=leveluprate){
     spawnrate += 5;
