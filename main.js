@@ -65,6 +65,11 @@ function update(){
     levelup = 0;
   }
   newdrop += spawnrate;
+  if(mouseX-25<=0){
+    mouseX = 2+25;
+  }else if(mouseX+25>=500){
+    mouseX = 498-25;
+  }
 }
 
 function draw(){
