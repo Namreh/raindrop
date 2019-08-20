@@ -18,7 +18,7 @@ let levelup = 0;
 let side = false;
 
 function endGame(){
-  console.log("game over");
+  location.reload()
 }
 
 function drop(){
